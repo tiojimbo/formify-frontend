@@ -1,17 +1,19 @@
-import { MainLayout } from "@/components/layout/main-layout";
+import { type Metadata } from "next";
 
-interface FormPageProps {
+export const metadata: Metadata = {
+  title: "Form Page",
+};
+
+interface PageProps {
   params: {
     id: string;
   };
 }
 
-export default function FormPage({ params }: FormPageProps) {
+export default function FormPage({ params }: PageProps) {
   return (
-    <MainLayout>
-      <div className="text-lg font-medium text-center">
-        Viewing Form ID: <strong>{params.id}</strong>
-      </div>
-    </MainLayout>
+    <div className="p-6 text-center text-lg font-medium">
+      Viewing Form ID: <strong>{params.id}</strong>
+    </div>
   );
 }
