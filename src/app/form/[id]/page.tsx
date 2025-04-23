@@ -5,4 +5,3 @@ export default function FormPage({ params }: { params: { id: string } }) {
       </div>
     );
   }
-  
